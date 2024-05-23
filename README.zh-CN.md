@@ -1,8 +1,8 @@
 # Tap4 AI Web UI
 
-这是一个由[Tap4 AI工具导航站](https://tap4.ai)开源的AI导航站项目。我们的目标是让大家很容易就拥有一个属于自己的AI导航站，
-收录自己喜欢的AI工具产品。这个项目非常轻量级，维护简单，适合对AI导航站感兴趣的个人开发者，也适合对NextJs有兴趣的学习者，
-欢迎大家fork和star。
+这是一个由[Tap4 AI工具导航站](https://gpt4oo.com)开源的AI导航站项目。我们的目标是让大家很容易就拥有一个属于自己的AI导航
+站，收录自己喜欢的AI工具产品。这个项目非常轻量级，维护简单，适合对AI导航站感兴趣的个人开发者，也适合对NextJs有兴趣的学习
+者，欢迎大家fork和star。
 
 [English](https://github.com/6677-ai/tap4-ai-webui/blob/main/README.md) | 简体中文
 
@@ -16,16 +16,6 @@
 - Supabase serverless 数据库
 
 ![tai4-ai](./public/images/tap4ai.zh-CN.png)
-
-## 感谢关注链接
-
-欢迎关注我们的Twitter: https://x.com/tap4ai
-
-如果觉得项目对你有帮助，欢迎请我喝杯咖啡：
-
-<a href="https://www.buymeacoffee.com/tap4ai0o" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-如果你对项目有兴趣，欢迎扫描二维码加微信群沟通： ![tap4-ai-wx-group](./public/images/640.png)
 
 ## 快速开始
 
@@ -110,31 +100,6 @@ lib/data.ts -> detailList
 
 - 在这里打开一个问题：[TAP4-AI-Directory](https://github.com/6677-ai/TAP4-AI-Directory/issues)
 - 给我们发邮件：[contact@tap4.ai](mailto:contact@tap4.ai)
-
-## 我们产品的链接
-
-### TAP4-AI-Directory
-
-全球AI工具的集合。| 收集免费的ChatGPT镜像、替代品、prompt、其他AI工具等。欲了解更多信息，请访
-问：[Tap4 AI](https://tap4.ai)
-
-### 如何在网站列表中获得您的首批用户
-
-这是提交您的产品以获取用户的网站列表。请访问
-[StartUp Your Product List](https://github.com/6677-ai/TAP4-AI-Directory/blob/main/Startup-Your-Product-List.md)
-
-### GPT-4o in OpenAI
-
-2024.05.14发布的惊人新功能。GPT-4o来了，让我们与她聊天。请访问 [GPT-4o](https://openai.com/index/hello-gpt-4o/)
-
-### The Tattoo AI Generator and Design
-
-Tattao AI Design是为纹身爱好者设计的纹身ai生成器。如果您对此感兴趣，请访问 [Tattoo AI Design](https://tattooai.design)
-
-### Anime Girl Studio -- AI Anime Girl Generator and Chat
-
-Anime Girl Studio是AI anime girl生成器和聊天产品。您可以生成您喜欢的角色并与AI anime girl聊天，请访问
-[Anime Girl Studio](https://animegirl.studio)
 
 ## 其他开源项目
 
