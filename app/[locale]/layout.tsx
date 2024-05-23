@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { Toaster } from '@/components/ui/sonner';
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Navigation />
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </NextIntlClientProvider>
+        <Analytics />
         <SeoScript />
         <GoogleAdScript />
       </body>
