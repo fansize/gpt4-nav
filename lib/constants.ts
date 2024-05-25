@@ -17,8 +17,7 @@ export const PAGE_SIZE = 20;
 
 export const FORM_PLACEHOLDER = 'https://gpt4oo.com/';
 
-export const WEBSITE_EXAMPLE =
-  '<a href="https://gpt4oo.com/" title="Tap4 AI Tools Directory">Tap4 AI Tools Diresctory</a>';
+export const WEBSITE_EXAMPLE = '<a href="https://gpt4oo.com/" title="AI Tools Directory">AI Tools Diresctory</a>';
 
 export const STARTUP_LIST = [
   {
