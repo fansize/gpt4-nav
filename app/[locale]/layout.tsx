@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { Toaster } from '@/components/ui/sonner';
-import Background from '@/components/home/background';
+import Background from '@/components/home/Background';
 import Navigation from '@/components/home/Navigation';
 
 import './globals.css';
