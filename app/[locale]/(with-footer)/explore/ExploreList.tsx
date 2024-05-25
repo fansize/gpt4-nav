@@ -18,6 +18,7 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
   return (
     <>
       <WebNavCardList dataList={res.rows} />
+      <WebNavCardList dataList={res.rows} />
       <BasePagination
         currentPage={currentPage}
         pageSize={WEB_PAGE_SIZE}

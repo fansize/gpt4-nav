@@ -23,7 +23,7 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
           <h3 className='line-clamp-1 flex-1 text-sm font-bold lg:text-base'>{title}</h3>
         </a>
         <a href={url} title={title} target='_blank' rel='noreferrer' className='hover:opacity-70'>
-          <SquareArrowOutUpRight className='size-5' />
+          <SquareArrowOutUpRight className='size-4' />
           <span className='sr-only'>{title}</span>
         </a>
       </div>

@@ -29,15 +29,16 @@ export default function Navigation() {
       <header className='bg-frosted-glass sticky left-0 top-0 z-50 flex h-[64px] bg-[#252A464A] px-5 blur-[60%] filter lg:px-0'>
         <nav className='mx-auto flex max-w-pc flex-1 items-center'>
           <div>
-            <Link className='hover:opacity-80' href='/' title={t('title')}>
+            <Link className='flex flex-row items-center gap-4 hover:opacity-80' href='/' title={t('title')}>
               <BaseImage
-                src='/images/tap4-ai.svg'
+                src='/images/gpt4oo.svg'
                 alt={t('title')}
                 title={t('title')}
                 width={64}
                 height={64}
-                className='size-[58px] lg:size-16'
+                className='size-[38px] lg:size-12'
               />
+              <p className='text-lg font-bold'>{t('title')}</p>
             </Link>
           </div>
           {/* pc */}

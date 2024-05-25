@@ -27,7 +27,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h2 className='text-xs lg:text-sm'>{t('subTitle')}</h2>
       </div>
       {children}
-      <Faq />
     </div>
   );
 }
