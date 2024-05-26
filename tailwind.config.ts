@@ -16,6 +16,7 @@ const config = {
       colors: {
         'tap4-black': '#708090',
         'dark-bg': '#1E1B24',
+        'default-bg': '#EEB343',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

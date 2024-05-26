@@ -7,7 +7,7 @@ import BaseImage from '../image/BaseImage';
 
 export default function WebNavCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
   return (
-    <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
+    <div className='flex flex-col gap-3 rounded-[12px] bg-default-bg p-2 lg:p-5'>
       <Link href={`/ai/${name}`} title={title}>
         <BaseImage
           width={278}
@@ -27,7 +27,7 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
           <span className='sr-only'>{title}</span>
         </a>
       </div>
-      <p className='line-clamp-5 text-xs text-white/70 lg:text-sm'>{content}</p>
+      <p className='line-clamp-4 text-xs text-slate-800 lg:text-sm'>{content}</p>
     </div>
   );
 }

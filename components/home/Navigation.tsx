@@ -26,7 +26,7 @@ export default function Navigation() {
 
   return (
     <>
-      <header className='bg-frosted-glass sticky left-0 top-0 z-50 flex h-[64px] bg-[#252A464A] px-5 blur-[60%] filter lg:px-0'>
+      <header className='sticky left-0 top-0 z-50 flex h-[64px] bg-default-bg px-5 blur-[60%] filter lg:px-0'>
         <nav className='mx-auto flex max-w-pc flex-1 items-center'>
           <div>
             <Link className='flex flex-row items-center gap-4 hover:opacity-80' href='/' title={t('title')}>
@@ -38,7 +38,7 @@ export default function Navigation() {
                 height={64}
                 className='size-[38px] lg:size-12'
               />
-              <p className='text-lg font-bold'>{t('title')}</p>
+              <p className='text-lg font-bold hover:opacity-80'>{t('title')}</p>
             </Link>
           </div>
           {/* pc */}
@@ -48,9 +48,9 @@ export default function Navigation() {
                 <Link key={item.code} href={item.href} title={item.code}>
                   <li
                     className={cn(
-                      'flex h-full items-center text-white/40 hover:text-white',
-                      pathname === item.href && 'text-white',
-                      pathname.includes(item.href) && item.href !== '/' && 'text-white',
+                      'flex h-full items-center text-slate-700',
+                      pathname === item.href && 'font-bold text-black',
+                      pathname.includes(item.href) && item.href !== '/' && 'font-bold text-black',
                     )}
                   >
                     {item.label}

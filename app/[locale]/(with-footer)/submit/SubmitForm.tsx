@@ -61,7 +61,7 @@ export default function SubmitForm({ className }: { className?: string }) {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn(
-          'mx-3 mb-5 flex h-[449px] flex-col justify-between rounded-[12px] bg-[#2C2D36] px-3 py-5 lg:h-[557px] lg:w-[444px] lg:p-8',
+          'mx-3 mb-5 flex h-[449px] flex-col justify-between rounded-[12px] bg-default-bg px-3 py-5 lg:h-[557px] lg:w-[444px] lg:p-8',
           className,
         )}
       >
@@ -75,7 +75,7 @@ export default function SubmitForm({ className }: { className?: string }) {
                 <FormControl>
                   <Input
                     placeholder='GPT4OO AI'
-                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] p-5'
                     {...field}
                   />
                 </FormControl>
@@ -92,7 +92,7 @@ export default function SubmitForm({ className }: { className?: string }) {
                 <FormControl>
                   <Input
                     placeholder={FORM_PLACEHOLDER}
-                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] p-5'
                     {...field}
                   />
                 </FormControl>
@@ -112,8 +112,8 @@ export default function SubmitForm({ className }: { className?: string }) {
           >
             {loading ? <Spinning className='size-[22px]' /> : t('submit')}
           </button>
-          <p className='text-[13px] text-white/40'>
-            {t('add')} <span className='text-white'>{WEBSITE_EXAMPLE}</span> {t('text')}
+          <p className='text-[13px] text-slate-600'>
+            {t('add')} <span className='text-slate-800'>{WEBSITE_EXAMPLE}</span> {t('text')}
           </p>
         </div>
       </form>

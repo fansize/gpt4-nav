@@ -43,7 +43,7 @@ export default async function Page({ params: { websiteName } }: { params: { webs
             href={data.url}
             target='_blank'
             rel='noreferrer'
-            className='flex-center mt-5 min-h-5 w-full gap-1 rounded-[8px] bg-white p-[10px] text-sm capitalize text-black hover:opacity-80 lg:mt-auto lg:w-[288px]'
+            className='flex-center mt-5 min-h-5 w-full gap-1 rounded-[8px] bg-default-bg p-[10px] text-sm capitalize text-black hover:opacity-80 lg:mt-auto lg:w-[288px]'
           >
             {t('visitWebsite')} <CircleArrowRight className='size-[14px]' />
           </a>
@@ -68,9 +68,9 @@ export default async function Page({ params: { websiteName } }: { params: { webs
           </div>
         </a>
       </div>
-      <Separator className='bg-[#010101]' />
+      <Separator />
       <div className='mb-5 px-3 lg:px-0'>
-        <h2 className='my-5 text-2xl text-white/40 lg:my-10'>{t('introduction')}</h2>
+        <h2 className='my-5 text-3xl font-semibold lg:my-10'>{t('introduction')}</h2>
         <MarkdownProse markdown={data?.detail || ''} />
       </div>
     </div>
