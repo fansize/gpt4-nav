@@ -1,5 +1,6 @@
 export type WebNavigationListRow = {
   content: string;
+  categoryName: string | null;
   id: string;
   imageUrl: string | null;
   name: string;
@@ -32,6 +33,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://woy.ai',
     imageUrl: 'https://img.artiversehub.ai/2024/05/20/c5a29d0bd95f4788a592d363b3ee4117.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/20/7d246f5ac3d240a4bc03e6c01d68f845.png',
+    categoryName: 'Directory',
   },
   {
     id: '1792107164427784194',
@@ -42,6 +44,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://apps.apple.com/us/app/chatgpt/id6448311069',
     imageUrl: 'https://img.artiversehub.ai/2024/05/19/d4cec43d06f04c6b95aec4b9e9a117ce.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/19/800316e0dcb04269b381f82c58251307.png',
+    categoryName: 'OpenAI',
   },
   {
     id: '1791403586373455873',
@@ -51,6 +54,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://undressing.ai/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/1c0ef6025e09413bac29ddcba644a09a.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/28087968ada64091b2331e8beea26180.png',
+    categoryName: 'Directory',
   },
   {
     id: '1793582246220726274',
@@ -61,6 +65,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://tattooai.design',
     imageUrl: 'https://img.artiversehub.ai/2024/05/23/668e9c65d3e9458b87cc6a382b1dee83.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/23/87d5c4e9b91f41d0b5eed738e1a813f9.png',
+    categoryName: 'Design',
   },
   {
     id: '1791402384042659841',
@@ -70,6 +75,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://www.viggle.ai/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/5690042c6af445308f2c746ca60abb2f.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/b570450893e8446da1c5085537b08cad.png',
+    categoryName: 'Text to Video',
   },
   {
     id: '1791400333535514625',
@@ -88,6 +94,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://chatgpt.com/?oai-dm=1',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/26ab59b6b0204f69a2b9700cf5867591.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/c12e9e756c5d43898fd58a6da69fd912.png',
+    categoryName: 'OpenAI',
   },
   {
     id: '1793585234460999681',
@@ -98,6 +105,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://aigirl.best',
     imageUrl: 'https://img.artiversehub.ai/2024/05/23/e8494b7617674af59a1e92e0fca59f66.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/23/e08dd1ce53194e138671f0681f6e4eea.png',
+    categoryName: 'AI to Image',
   },
   {
     id: '1791396502303051777',
@@ -108,6 +116,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://character.ai/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/774ca19a2623414290072bc9f3a3c497.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/75c333881a034f58a361e4cfa493d6ef.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791393780052955138',
@@ -118,6 +127,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://suno.com/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/f0970037821c497b851aded7715e9a0b.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/0dbc6fbefd3b4eceb79dffcd673a9d37.png',
+    categoryName: 'Directory',
   },
   {
     id: '17913965023030513337',
@@ -128,6 +138,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://animegirl.studio/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/23/e8494b7617674af59a1e92e0fca59f66.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/23/e08dd1ce53194e138671f0681f6e4eea.png',
+    categoryName: 'AI to Image',
   },
   {
     id: '1791390492431650817',
@@ -138,6 +149,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://poe.com/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/a9c73ddccd95429d9be3bdc03363d192.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/b3820ce498fe40b79bc84fef261cb758.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791387169251037186',
@@ -147,6 +159,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://www.shutterstock.com/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/8d21535177424da387398e8fedb679db.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/d658672df59d46dd9e01812bee72dffa.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791383769935417346',
@@ -156,6 +169,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://claude.ai/login?returnTo=%2F%3F',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/c48e4c4aba3b4da49e79ac27de26e2ae.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/c7c0684a9bc74719b3205b6ed463333f.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791380436055134209',
@@ -166,6 +180,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://shop.app/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/5a59e33883384595831721b4ff0c9793.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/1eca27beccfd414a81dd03cbc3267605.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791378928228012034',
@@ -176,6 +191,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://www.salesforce.com/jp/?ir=1',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/b5edaba9471f466d8f06097497ba02c0.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/6a69a664fdca41b898a607eb2819574f.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791374430986211330',
@@ -186,6 +202,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://apps.apple.com/us/app/honeydo-speak-snap-and-shop/id6473463998?platform=iphone',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/4afc7292bfd04a57bc331b49c3e313f8.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/19fce8f40cbd4349a420c2844ac094ee.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791371782497144834',
@@ -196,6 +213,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://www.notion.so/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/f838ab3950e94e11a0736ed907584ad5.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/4f367b11689b4fc0833d99f1ad2d9e20.png',
+    categoryName: 'Directory',
   },
   {
     id: '1791368264352698370',
@@ -205,54 +223,7 @@ export const dataList: WebNavigationListRow[] = [
     url: 'https://artiversehub.ai/',
     imageUrl: 'https://img.artiversehub.ai/2024/05/17/71e27dba0439487b80b7439539e8a566.png',
     thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/f49d3b9da1f543739e9a89c4587e2954.png',
-  },
-  {
-    id: '1791361661838725121',
-    name: 'deepl',
-    title: 'DeepL',
-    content:
-      "DeepL is the world's most accurate translator that provides instant and accurate translations for individuals and teams. It offers the ability to translate texts and full document files with support for various languages.",
-    url: 'https://www.deepl.com/translator',
-    imageUrl: 'https://img.artiversehub.ai/2024/05/17/3b4c2eb66e3e405187434e0fc71d0c52.png',
-    thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/80991fe84ffb454fba7dbf21baa18cee.png',
-  },
-  {
-    id: '1791359120715452418',
-    name: 'adobe',
-    title: 'Adobe',
-    content: 'Adobe is a leading company that provides creative, marketing, and document management solutions.',
-    url: 'https://www.adobe.com/home',
-    imageUrl: 'https://img.artiversehub.ai/2024/05/17/a6e3fc4e6b634451b7f0926f0ee319f1.png',
-    thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/5477559fa544460da587127205b41fd6.png',
-  },
-  {
-    id: '1791354780332232706',
-    name: 'gemini',
-    title: 'Gemini',
-    content:
-      "Gemini is a platform that provides users with direct access to Google's best family of AI models on their phone.",
-    url: 'https://gemini.google.com/',
-    imageUrl: 'https://img.artiversehub.ai/2024/05/17/e34e48ef03ab424884a8906ccdc7f887.png',
-    thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/e5cede4b649d4d21863186282eebd799.png',
-  },
-  {
-    id: '1791352338450386946',
-    name: 'sora',
-    title: 'Sora',
-    content: 'Sora is an AI model that can create realistic and imaginative scenes from text instructions.',
-    url: 'https://openai.com/index/sora/',
-    imageUrl: 'https://img.artiversehub.ai/2024/05/17/6c89ac1354cc44e7a46dbd6f7d12c38c.png',
-    thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/5fac577a5b3049698fe1c9f5aa16e665.png',
-  },
-  {
-    id: '1791348237226381313',
-    name: 'openai',
-    title: 'OpenAI',
-    content:
-      'OpenAI is a company that is focused on creating safe AGI (Artificial General Intelligence) that benefits all of humanity. They conduct pioneering research in the field of AI and develop advanced models and technologies.',
-    url: 'https://openai.com/',
-    imageUrl: 'https://img.artiversehub.ai/2024/05/17/d46533e95b4e419bb043ed71dadbba06.png',
-    thumbnailUrl: 'https://img.artiversehub.ai/2024/05/17/2f3ad3237754483a87032e17d0764b8d.png',
+    categoryName: 'Directory',
   },
 ];
 

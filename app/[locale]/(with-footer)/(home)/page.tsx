@@ -5,7 +5,7 @@ import { getWebNavigationList } from '@/network/webNavigation';
 import { CircleChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
-import Faq from '@/components/Faq';
+import { WebNavigationListRow } from '@/lib/data';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
 const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
@@ -33,6 +33,19 @@ export default async function Page() {
   const t = await getTranslations('Home');
   const res = await getWebNavigationList({ pageNum: 1, pageSize: 20 });
 
+  // 按照 category 分组
+  const groupedData: { [key: string]: WebNavigationListRow[] } = res.rows.reduce(
+    (acc: { [key: string]: WebNavigationListRow[] }, row) => {
+      const key = row.categoryName || 'unknown';
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(row);
+      return acc;
+    },
+    {},
+  );
+
   return (
     <div className='relative w-full'>
       <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
@@ -40,18 +53,23 @@ export default async function Page() {
           <h1 className='text-2xl font-bold text-white lg:text-5xl'>{t('title')}</h1>
           <h2 className='text-balance text-xs font-bold text-white lg:text-sm'>{t('subTitle')}</h2>
         </div>
+
         <div className='flex flex-col gap-5'>
-          <h2 className='text-left text-[18px] lg:text-[32px]'>{t('ai-navigate')}</h2>
-          <WebNavCardList dataList={res.rows} />
+          {Object.keys(groupedData).map((categoryName) => (
+            <div key={categoryName}>
+              <h2 className='mb-2 text-left text-[18px] lg:text-[32px]'>{categoryName}</h2>
+              <WebNavCardList key={categoryName} dataList={groupedData[categoryName]} />
+            </div>
+          ))}
+
           <Link
             href='/explore'
-            className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-white p-[10px] text-sm leading-4 hover:opacity-70'
+            className='mx-auto my-8 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-white p-[10px] text-sm leading-4 hover:opacity-70'
           >
             {t('exploreMore')}
             <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px]' />
           </Link>
         </div>
-        {/* <Faq /> */}
         <ScrollToTop />
       </div>
     </div>
