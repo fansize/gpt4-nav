@@ -9,6 +9,22 @@ export type WebNavigationListRow = {
   url: string;
 };
 
+export type NavigationDetail = {
+  content: string;
+  categoryName: string;
+  id: string; // UUID is generally represented as a string
+  imageUrl: string;
+  name: string;
+  thumbnailUrl: string;
+  title: string;
+  url: string;
+  collectionTime: string;
+  detail: string;
+  starRating: number;
+  tagName: string;
+  websiteData: string;
+};
+
 export type WebNavigationDetailData = {
   categoryName: string;
   collectionTime: string;

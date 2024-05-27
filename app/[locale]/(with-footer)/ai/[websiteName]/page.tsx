@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import { getWebNavigationDetail } from '@/network/webNavigation';
+import { getNavDetailFromSupabase, getWebNavigationDetail } from '@/network/webNavigation';
 import { CircleArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { toast } from 'sonner';
 
 import { Separator } from '@/components/ui/separator';
 import BaseImage from '@/components/image/BaseImage';
@@ -16,7 +17,18 @@ export async function generateMetadata({
     locale,
     namespace: 'Metadata.ai',
   });
-  const res = await getWebNavigationDetail(websiteName);
+  const res = await getNavDetailFromSupabase(websiteName);
+
+  // if (res.code !== 200) {
+  //   toast.message(res.msg);
+  // }
+
+  if (!res.data) {
+    return {
+      title: '',
+      description: '',
+    };
+  }
 
   return {
     title: `${res.data.title} | ${t('titleSubfix')}`,
@@ -26,7 +38,7 @@ export async function generateMetadata({
 
 export default async function Page({ params: { websiteName } }: { params: { websiteName: string } }) {
   const t = await getTranslations('Startup.detail');
-  const res = await getWebNavigationDetail(websiteName);
+  const res = await getNavDetailFromSupabase(websiteName);
   const { data } = res;
 
   if (!data) return null;

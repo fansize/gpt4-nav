@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { createClient } from '@/db/supabase/server';
 import { getWebNavigationList } from '@/network/webNavigation';
 import { CircleChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
-import { WebNavigationListRow } from '@/lib/data';
+import { NavigationDetail, WebNavigationListRow } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
@@ -33,6 +34,20 @@ const featureList: string[] = ['Most popular', 'Hot', 'New', 'Recommended', 'Rec
 export default async function Page() {
   const t = await getTranslations('Home');
   const res = await getWebNavigationList({ pageNum: 1, pageSize: 20 });
+
+  // 从 Supabase 数据库获取数据
+  const supabase = createClient();
+  const { data: aiProducts } = await supabase.from('ai-products').select();
+
+  const groupedDataFromSupabase: { [key: string]: NavigationDetail[] } =
+    aiProducts?.reduce((acc: { [key: string]: NavigationDetail[] }, row) => {
+      const key = row.categoryName || 'unknown';
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(row);
+      return acc;
+    }, {}) || {};
 
   // 按照 category 分组
   const groupedData: { [key: string]: WebNavigationListRow[] } = res.rows.reduce(
@@ -66,8 +81,20 @@ export default async function Page() {
         ))}
       </div>
 
-      {/* 产品列表 */}
+      {/* 最流行的产品列表，数据来源 Supabase */}
       <div className='flex flex-col gap-6'>
+        {Object.keys(groupedDataFromSupabase).map((categoryName) => (
+          <div key={categoryName}>
+            <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-3xl font-bold text-transparent md:text-4xl'>
+              {categoryName}
+            </h2>
+            <WebNavCardList key={categoryName} dataList={groupedDataFromSupabase[categoryName]} />
+          </div>
+        ))}
+      </div>
+
+      {/* 产品列表 */}
+      {/* <div className='flex flex-col gap-6'>
         {Object.keys(groupedData).map((categoryName) => (
           <div key={categoryName}>
             <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-3xl font-bold text-transparent md:text-4xl'>
@@ -76,7 +103,7 @@ export default async function Page() {
             <WebNavCardList key={categoryName} dataList={groupedData[categoryName]} />
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* 更多标签 */}
       <Link

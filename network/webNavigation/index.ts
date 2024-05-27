@@ -1,4 +1,6 @@
-import { dataList, detailList, WebNavigationDetailData, WebNavigationListRow } from '@/lib/data';
+import { createClient } from '@/db/supabase/server';
+
+import { dataList, detailList, NavigationDetail, WebNavigationDetailData, WebNavigationListRow } from '@/lib/data';
 
 /* eslint-disable @typescript-eslint/indent */
 export type ResponseBase<T> = {
@@ -40,4 +42,26 @@ export async function getWebNavigationDetail(name: string) {
   } satisfies ResponseData<WebNavigationDetailData>;
 
   return res;
+}
+
+export async function getNavDetailFromSupabase(name: string) {
+  const supabase = createClient();
+
+  const { data, error } = await supabase.from('ai-products').select('*').eq('title', name).single();
+
+  if (error) {
+    return {
+      code: 500,
+      msg: error.message,
+      data: null,
+    };
+  }
+
+  const res = data as NavigationDetail;
+
+  return {
+    code: 200,
+    msg: 'success',
+    data: res,
+  };
 }
