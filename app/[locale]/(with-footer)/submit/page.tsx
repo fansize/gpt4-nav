@@ -22,10 +22,12 @@ export default function Page() {
   const t = useTranslations('Submit');
 
   return (
-    <div className='mx-auto max-w-pc'>
-      <div className='flex-y-center my-3 flex lg:my-10'>
-        <h1 className='text-5xl font-bold'>{t('title')}</h1>
-        <h2 className='mt-[5px] text-sm font-bold lg:my-3'>{t('subTitle')}</h2>
+    <div className='container py-12 sm:py-24'>
+      <div className='text-center'>
+        <h1 className='text-3xl font-bold md:text-4xl'>{t('title')}</h1>
+        <h2 className='mx-auto mb-8 mt-4 text-xl text-muted-foreground md:w-3/4'>{t('subTitle')}</h2>
+      </div>
+      <div className='flex items-center justify-center'>
         <SubmitForm />
       </div>
       <Faq />

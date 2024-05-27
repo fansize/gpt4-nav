@@ -12,17 +12,17 @@ function TitleItem({ children }: { children: React.ReactNode }) {
 }
 
 function ContentItem({ children }: { children: React.ReactNode }) {
-  return <h3 className='mt-3 text-white/60'>{children}</h3>;
+  return <h3 className='mt-2'>{children}</h3>;
 }
 
 export default function Faq() {
   const t = useTranslations('Faq');
   return (
-    <div className='mx-auto max-w-pc space-y-8 pb-5'>
+    <section id='faq' className='container pb-8 pt-24'>
       <h1 className='text-center text-2xl font-bold lg:pb-3 lg:text-3xl'>{t('title')}</h1>
 
       <div className='grid grid-cols-1 gap-5 px-3 lg:grid-cols-1 lg:gap-16 lg:px-0'>
-        <Accordion type='multiple'>
+        <Accordion type='multiple' className='w-full'>
           <AccordionItem value='item-1'>
             <AccordionTrigger>{t('1.question')}</AccordionTrigger>
             <AccordionContent>{t('1.answer')}</AccordionContent>
@@ -44,6 +44,6 @@ export default function Faq() {
           </AccordionItem>
         </Accordion>
       </div>
-    </div>
+    </section>
   );
 }

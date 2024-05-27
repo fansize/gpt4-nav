@@ -11,6 +11,7 @@ import { z } from 'zod';
 
 import { FORM_PLACEHOLDER, WEBSITE_EXAMPLE } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import Spinning from '@/components/Spinning';
@@ -60,10 +61,7 @@ export default function SubmitForm({ className }: { className?: string }) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn(
-          'mx-3 mb-5 flex h-[449px] flex-col justify-between rounded-[12px] bg-default-bg px-3 py-5 lg:h-[557px] lg:w-[444px] lg:p-8',
-          className,
-        )}
+        className='flex w-1/2 flex-col gap-3 rounded-lg border bg-card p-2 text-card-foreground shadow-sm lg:p-5'
       >
         <div className='space-y-3 lg:space-y-5'>
           <FormField
@@ -102,16 +100,9 @@ export default function SubmitForm({ className }: { className?: string }) {
           />
         </div>
         <div className='flex flex-col gap-[10px] lg:gap-8'>
-          <button
-            type='submit'
-            disabled={loading}
-            className={cn(
-              'flex-center mt-auto h-[48px] w-full gap-4 rounded-[8px] bg-white text-center font-bold text-black hover:cursor-pointer hover:opacity-80',
-              loading && 'hover:cursor-not-allowed',
-            )}
-          >
+          <Button type='submit' disabled={loading} className='mt-6'>
             {loading ? <Spinning className='size-[22px]' /> : t('submit')}
-          </button>
+          </Button>
           <p className='text-[13px] text-slate-600'>
             {t('add')} <span className='text-slate-800'>{WEBSITE_EXAMPLE}</span> {t('text')}
           </p>
