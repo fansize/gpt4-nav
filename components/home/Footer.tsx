@@ -27,7 +27,7 @@ export default function Footer() {
 
   const SupportLinks = [
     {
-      title: t('gpt4oo'),
+      title: t('GPT4oo'),
       href: 'https://www.gpt4oo.ai',
     },
     {
