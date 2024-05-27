@@ -16,13 +16,7 @@ function InfoLink({
   type?: string;
 }) {
   return (
-    <Link
-      href={href}
-      title={title}
-      className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm'
-      target={target}
-      type={type}
-    >
+    <Link href={href} title={title} className='opacity-60 hover:opacity-100' target={target} type={type}>
       {title}
     </Link>
   );
@@ -54,35 +48,41 @@ export default function Footer() {
   ];
 
   return (
-    <footer className='w-full bg-default-bg'>
-      <div className='mx-auto flex min-h-[251px] max-w-pc flex-col items-center justify-between p-10 pb-5 lg:h-[180px] lg:flex-row lg:px-0 lg:pb-10'>
-        <div className='flex flex-col items-center gap-4 lg:items-stretch'>
-          <h1 className='text-xl font-bold lg:h-8 lg:text-[32px]'>{t('title')}</h1>
-          <h2 className='text-xs'>{t('subTitle')}</h2>
+    <footer id='footer'>
+      <hr className='mx-auto w-11/12' />
+
+      <section className='container grid grid-cols-2 gap-x-12 gap-y-8 py-20 md:grid-cols-3'>
+        <div className='col-span-full xl:col-span-2'>
+          <a rel='noreferrer noopener' href='/' className='flex text-xl font-bold'>
+            {t('title')}
+          </a>
         </div>
+
         <div className='mt-5 flex flex-col items-center gap-y-5 lg:mt-0 lg:flex-row lg:items-stretch lg:gap-x-10'>
-          <div className='flex w-full flex-col gap-2'>
-            <h2 className='font-bold'>{t('support')}</h2>
+          <div className='flex flex-col gap-2'>
+            <h3 className='text-lg font-bold'>{t('support')}</h3>
             {SupportLinks.map((item) => (
               <a
                 href={item.href}
                 key={item.href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-xs hover:opacity-70 lg:text-base'
+                className='opacity-60 hover:opacity-100'
                 title={item.title}
               >
                 {item.title}
               </a>
             ))}
           </div>
-          <div className='grid grid-cols-2 gap-x-10 gap-y-5 lg:grid-cols-1 lg:gap-3'>
+
+          <div className='flex flex-col gap-2'>
+            <h3 className='text-lg font-bold'>{t('contactUs')}</h3>
             {INFO_LIST.map((item) => (
               <InfoLink key={item.href} href={item.href} title={item.title} />
             ))}
             <a
               href={`mailto:${CONTACT_US_EMAIL}`}
-              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-base'
+              className='opacity-60 hover:opacity-100'
               title={t('contactUs')}
               type='email'
             >
@@ -90,7 +90,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 }

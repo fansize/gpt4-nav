@@ -47,14 +47,14 @@ export default async function Page() {
   );
 
   return (
-    <div className='relative w-full'>
-      <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
-        <div className='my-5 flex flex-col text-center lg:mx-auto lg:my-10 lg:gap-4'>
-          <h1 className='text-2xl font-bold lg:text-5xl'>{t('title')}</h1>
-          <h2 className='text-balance text-xs font-bold lg:text-sm'>{t('subTitle')}</h2>
+    <>
+      <section id='products gallery' className='container py-12 sm:py-24'>
+        <div className='text-center'>
+          <h1 className='text-3xl font-bold md:text-4xl '>{t('title')}</h1>
+          <h2 className='mx-auto mb-8 mt-4 text-xl text-muted-foreground md:w-3/4'>{t('subTitle')}</h2>
         </div>
 
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-6'>
           {Object.keys(groupedData).map((categoryName) => (
             <div key={categoryName}>
               <h2 className='mb-2 text-left text-[18px] lg:text-[32px]'>{categoryName}</h2>
@@ -70,8 +70,9 @@ export default async function Page() {
             <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px]' />
           </Link>
         </div>
-        <ScrollToTop />
-      </div>
-    </div>
+      </section>
+
+      <ScrollToTop />
+    </>
   );
 }
