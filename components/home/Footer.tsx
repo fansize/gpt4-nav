@@ -28,11 +28,7 @@ export default function Footer() {
   const SupportLinks = [
     {
       title: t('GPT4oo'),
-      href: 'https://www.gpt4oo.ai',
-    },
-    {
-      title: t('tattoo'),
-      href: 'https://tattooai.design',
+      href: 'https://gpt4oo.com',
     },
   ];
 
