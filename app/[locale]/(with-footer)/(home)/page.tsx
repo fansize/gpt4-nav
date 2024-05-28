@@ -88,9 +88,11 @@ export default async function Page() {
       <div className='md:justify-left my-8 flex flex-wrap gap-4'>
         {sortedCategroyKeys.map((feature: string) => (
           <div key={feature}>
-            <Button variant='outline' size='sm' className='text-xs'>
-              {t(`categoryName.${feature}`)}
-            </Button>
+            <a href={`#${feature}`}>
+              <Button variant='outline' size='sm' className='text-xs'>
+                {t(`categoryName.${feature}`)}
+              </Button>
+            </a>
           </div>
         ))}
       </div>
@@ -99,7 +101,13 @@ export default async function Page() {
       <div className='flex flex-col gap-6'>
         {Object.keys(sortedGroupedDataFromSupabase).map((categoryName) => (
           <div key={categoryName}>
-            <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-2xl font-bold text-transparent md:text-3xl'>
+            {/* 这个div元素是为了保证页面内跳转时，跳转到的位置不会被导航栏遮挡 */}
+            <div id={categoryName} className='invisible relative' style={{ top: '-3.5rem' }} />
+
+            <h2
+              id={categoryName}
+              className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-2xl font-bold text-transparent md:text-3xl'
+            >
               {t(`categoryName.${categoryName}`)}
             </h2>
             <WebNavCardList key={categoryName} dataList={sortedGroupedDataFromSupabase[categoryName]} />

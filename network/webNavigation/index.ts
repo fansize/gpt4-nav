@@ -26,7 +26,7 @@ export type WebNavigationListRequest = {
 };
 
 export async function getWebNavigationList({ pageNum, pageSize }: WebNavigationListRequest) {
-  console.log({ pageNum, pageSize });
+  // console.log({ pageNum, pageSize });
   const res = { code: 200, msg: 'success', rows: dataList, total: dataList.length } satisfies ResponseRows<
     WebNavigationListRow[]
   >;
