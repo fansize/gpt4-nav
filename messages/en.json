@@ -121,7 +121,14 @@
     "title": "GPT4oo AI - Discover The Best AI Tools 2024",
     "subTitle": "Get your favorite AI tools in GPT4oo AI Tools Directory. AI tools list are updated daily by GPT-4o. It's free to submit here to enhance your SEO now. ",
     "ai-navigate": "AI Tools List",
-    "exploreMore": "Get More AI Tools"
+    "exploreMore": "Get More AI Tools",
+    "categoryName": {
+      "1Chatbots": "Chatbots",
+      "2Writing assistants": "Writing Assistants",
+      "3Text to Image": "Text to Image",
+      "4Productivity": "Productivity",
+      "9Learning Resources": "Learning Resources"
+    }
   },
   "Submit": {
     "title": "Submit your AI Tool",

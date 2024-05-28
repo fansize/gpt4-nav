@@ -29,8 +29,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const featureList: string[] = ['Most popular', 'Hot', 'New', 'Recommended', 'Recently updated'];
-
 export default async function Page() {
   const t = await getTranslations('Home');
   const res = await getWebNavigationList({ pageNum: 1, pageSize: 20 });
@@ -48,22 +46,35 @@ export default async function Page() {
       if (!acc[key]) {
         acc[key] = [];
       }
-      acc[key].push(row);
+      const navigationDetail: NavigationDetail = {
+        id: row.id,
+        name: row.name,
+        title: row.title,
+        thumbnailUrl: row.thumbnailUrl,
+        url: row.url,
+        content: row.content,
+        starRating: row.starRating,
+        categoryName: row.categoryName,
+        imageUrl: '',
+        collectionTime: '',
+        detail: '',
+        tagName: '',
+        websiteData: '',
+      };
+      acc[key].push(navigationDetail);
       return acc;
     }, {}) || {};
 
-  // 按照 category 分组
-  const groupedData: { [key: string]: WebNavigationListRow[] } = res.rows.reduce(
-    (acc: { [key: string]: WebNavigationListRow[] }, row) => {
-      const key = row.categoryName || 'unknown';
-      if (!acc[key]) {
-        acc[key] = [];
-      }
-      acc[key].push(row);
-      return acc;
-    },
-    {},
-  );
+  // 预设的分类标签
+  const featureList: string[] = ['Most popular', 'Hot', 'New', 'Recommended', 'Recently updated'];
+  // 获取所有的分类名称
+  const sortedCategroyKeys = Object.keys(groupedDataFromSupabase).sort();
+
+  // Create a new object and add the key-value pairs in the sorted order
+  const sortedGroupedDataFromSupabase: { [key: string]: NavigationDetail[] } = {};
+  sortedCategroyKeys.forEach((key) => {
+    sortedGroupedDataFromSupabase[key] = groupedDataFromSupabase[key];
+  });
 
   return (
     <section id='products gallery' className='container py-10'>
@@ -75,10 +86,10 @@ export default async function Page() {
 
       {/* 分类标签 */}
       <div className='md:justify-left my-8 flex flex-wrap gap-4'>
-        {featureList.map((feature: string) => (
+        {sortedCategroyKeys.map((feature: string) => (
           <div key={feature}>
             <Button variant='outline' size='sm' className='text-xs'>
-              {feature}
+              {t(`categoryName.${feature}`)}
             </Button>
           </div>
         ))}
@@ -86,27 +97,15 @@ export default async function Page() {
 
       {/* 最流行的产品列表，数据来源 Supabase */}
       <div className='flex flex-col gap-6'>
-        {Object.keys(groupedDataFromSupabase).map((categoryName) => (
+        {Object.keys(sortedGroupedDataFromSupabase).map((categoryName) => (
           <div key={categoryName}>
-            <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-3xl font-bold text-transparent md:text-4xl'>
-              {categoryName}
+            <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-2xl font-bold text-transparent md:text-3xl'>
+              {t(`categoryName.${categoryName}`)}
             </h2>
-            <WebNavCardList key={categoryName} dataList={groupedDataFromSupabase[categoryName]} />
+            <WebNavCardList key={categoryName} dataList={sortedGroupedDataFromSupabase[categoryName]} />
           </div>
         ))}
       </div>
-
-      {/* 产品列表 */}
-      {/* <div className='flex flex-col gap-6'>
-        {Object.keys(groupedData).map((categoryName) => (
-          <div key={categoryName}>
-            <h2 className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-3xl font-bold text-transparent md:text-4xl'>
-              {categoryName}
-            </h2>
-            <WebNavCardList key={categoryName} dataList={groupedData[categoryName]} />
-          </div>
-        ))}
-      </div> */}
 
       {/* 更多标签 */}
       <Link
