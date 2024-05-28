@@ -47,7 +47,7 @@ export async function getWebNavigationDetail(name: string) {
 export async function getNavDetailFromSupabase(name: string) {
   const supabase = createClient();
 
-  const { data, error } = await supabase.from('ai-products').select('*').eq('title', name).single();
+  const { data, error } = await supabase.from('ai-products').select('*').eq('name', name).single();
 
   if (error) {
     return {

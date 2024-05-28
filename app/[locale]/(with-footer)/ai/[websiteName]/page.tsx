@@ -69,11 +69,11 @@ export default async function Page({ params: { websiteName } }: { params: { webs
           <BaseImage
             title={data.title}
             alt={data.title}
-            // width={466}
-            // height={243}
-            fill
-            src={data.thumbnailUrl || ''}
-            className='absolute mt-3 aspect-[466/234] w-full rounded-[16px] border border-[#424242] bg-[#424242] bg-cover lg:mt-0'
+            width={2422}
+            height={1562}
+            // fill
+            src={data.thumbnailUrl || `https://img.gpt4oo.com/Chatbox%2F${data.name}.jpeg`}
+            className='absolute mt-3 aspect-[2422/1562] w-full rounded-[16px] border border-[#424242] bg-[#424242] bg-cover lg:mt-0'
           />
           <div className='absolute inset-0 z-10 hidden items-center justify-center gap-1 rounded-[16px] bg-black bg-opacity-50 text-2xl text-white transition-all duration-200 group-hover:flex'>
             {t('visitWebsite')} <CircleArrowRight className='size-5' />

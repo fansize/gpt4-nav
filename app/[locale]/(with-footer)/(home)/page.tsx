@@ -37,7 +37,10 @@ export default async function Page() {
 
   // 从 Supabase 数据库获取数据
   const supabase = createClient();
-  const { data: aiProducts } = await supabase.from('ai-products').select();
+  const { data: aiProducts } = await supabase
+    .from('ai-products')
+    .select('id, name, title, thumbnailUrl, url, content, starRating, categoryName')
+    .order('starRating', { ascending: false });
 
   const groupedDataFromSupabase: { [key: string]: NavigationDetail[] } =
     aiProducts?.reduce((acc: { [key: string]: NavigationDetail[] }, row) => {
@@ -63,7 +66,7 @@ export default async function Page() {
   );
 
   return (
-    <section id='products gallery' className='container py-12 sm:py-24'>
+    <section id='products gallery' className='container py-10'>
       {/* 标题 */}
       <div className='text-center'>
         <h1 className='text-3xl font-bold md:text-4xl '>{t('title')}</h1>

@@ -10,12 +10,12 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
     <div className='flex flex-col gap-3  rounded-lg border bg-card p-2 text-card-foreground shadow-sm lg:p-5'>
       <Link href={`/ai/${name}`} title={title}>
         <BaseImage
-          width={278}
-          height={156}
-          src={thumbnailUrl || ''}
+          width={2422}
+          height={1562}
+          src={thumbnailUrl || `https://img.gpt4oo.com/Chatbox%2F${name}.jpeg`}
           alt={title}
           title={title}
-          className='aspect-[278/156] rounded-[8px] bg-white/40 hover:opacity-70'
+          className='aspect-[2422/1562] rounded-[8px] bg-white/40 hover:opacity-70'
         />
       </Link>
       <div className='flex items-center justify-between'>
