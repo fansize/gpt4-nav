@@ -1,4 +1,4 @@
-Sitemap: https://www.gpt4oo.com/sitemap.xml
+Sitemap: https://gpt4oo.com/sitemap.xml
 
 User-agent: *
 Allow: /
