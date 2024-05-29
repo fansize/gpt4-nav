@@ -8,6 +8,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { NavigationDetail, WebNavigationListRow } from '@/lib/data';
 import { Button } from '@/components/ui/button';
+import About from '@/components/home/About';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
 const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
@@ -36,10 +37,11 @@ export default async function Page() {
   // 从 Supabase 数据库获取数据
   const supabase = createClient();
   const { data: aiProducts } = await supabase
-    .from('ai-products')
-    .select('id, name, title, thumbnailUrl, url, content, starRating, categoryName')
+    .from('allProducts')
+    .select('id, name, title, thumbnailUrl, url, content, starRating, categoryName, tagName')
     .order('starRating', { ascending: false });
 
+  // 将数据按照分类名称分组
   const groupedDataFromSupabase: { [key: string]: NavigationDetail[] } =
     aiProducts?.reduce((acc: { [key: string]: NavigationDetail[] }, row) => {
       const key = row.categoryName || 'unknown';
@@ -76,6 +78,32 @@ export default async function Page() {
     sortedGroupedDataFromSupabase[key] = groupedDataFromSupabase[key];
   });
 
+  // 将数据按照 Tag 分组
+  const groupedDataFromSupabaseByTag: { [key: string]: NavigationDetail[] } =
+    aiProducts?.reduce((acc: { [key: string]: NavigationDetail[] }, row) => {
+      const key = row.tagName || 'unknown';
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      const navigationDetail: NavigationDetail = {
+        id: row.id,
+        name: row.name,
+        title: row.title,
+        thumbnailUrl: row.thumbnailUrl,
+        url: row.url,
+        content: row.content,
+        starRating: row.starRating,
+        categoryName: row.categoryName,
+        imageUrl: '',
+        collectionTime: '',
+        detail: '',
+        tagName: row.tagName,
+        websiteData: '',
+      };
+      acc[key].push(navigationDetail);
+      return acc;
+    }, {}) || {};
+
   return (
     <section id='products gallery' className='container py-10'>
       {/* 标题 */}
@@ -97,7 +125,27 @@ export default async function Page() {
         ))}
       </div>
 
-      {/* 最流行的产品列表，数据来源 Supabase */}
+      {/* 按照标签分类 */}
+      <div className='flex flex-col gap-6'>
+        {Object.keys(groupedDataFromSupabaseByTag).map((tagName) => (
+          <div key={tagName}>
+            {/* 这个div元素是为了保证页面内跳转时，跳转到的位置不会被导航栏遮挡 */}
+            <div id={tagName} className='invisible relative' style={{ top: '-3.5rem' }} />
+
+            <h2
+              id={tagName}
+              className='mb-3 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-2xl font-bold text-transparent md:text-3xl'
+            >
+              {tagName}
+            </h2>
+            <WebNavCardList key={tagName} dataList={groupedDataFromSupabaseByTag[tagName]} />
+          </div>
+        ))}
+      </div>
+
+      <About />
+
+      {/* 按照类型分类 */}
       <div className='flex flex-col gap-6'>
         {Object.keys(sortedGroupedDataFromSupabase).map((categoryName) => (
           <div key={categoryName}>
