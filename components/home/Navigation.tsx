@@ -65,9 +65,9 @@ export default function Navigation() {
             </div>
 
             {/* mobile */}
-            <div className='mx-3 flex items-center gap-x-4 lg:hidden'>
+            {/* <div className='flex items-center gap-x-4 md:hidden'>
               <MenuBtn open={open} onClick={() => setOpen(!open)} />
-            </div>
+            </div> */}
           </NavigationMenuList>
         </NavigationMenu>
       </header>

@@ -61,7 +61,7 @@ export default function SubmitForm({ className }: { className?: string }) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex w-1/2 flex-col gap-3 rounded-lg border bg-card p-2 text-card-foreground shadow-sm lg:p-5'
+        className='flex flex-col gap-3 rounded-lg border bg-card p-2 text-card-foreground shadow-sm md:w-1/2 lg:p-5'
       >
         <div className='space-y-3 lg:space-y-5'>
           <FormField
