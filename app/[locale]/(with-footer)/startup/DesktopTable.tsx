@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -12,22 +13,19 @@ export default function DesktopTable() {
 
   return (
     <div className='mb-10 hidden w-full lg:block'>
-      <Table className='border-separate border-spacing-y-3'>
+      <Table className=''>
         <TableHeader>
-          <TableRow className='tr-rounded h-16 rounded-[4px] border-none bg-default-bg hover:bg-slate-200'>
-            <TableHead className='w-[100px] text-2xl font-bold'>{t('da')}</TableHead>
-            <TableHead className='w-[200px] text-2xl font-bold'>{t('website')}</TableHead>
-            <TableHead className='w-[200px] text-2xl font-bold'>{t('tags')}</TableHead>
-            <TableHead className='w-[200px] text-2xl font-bold'>{t('price')}</TableHead>
-            <TableHead className='w-16 text-2xl font-bold'>{t('submission')}</TableHead>
+          <TableRow className='tr-rounded h-16 rounded-[4px] hover:bg-slate-200'>
+            <TableHead className='w-[100px] text-xl font-bold'>{t('da')}</TableHead>
+            <TableHead className='w-[200px] text-xl font-bold'>{t('website')}</TableHead>
+            <TableHead className='w-[100px] text-xl font-bold'>{t('tags')}</TableHead>
+            <TableHead className='w-[200px] text-xl font-bold'>{t('price')}</TableHead>
+            <TableHead className='w-16 text-xl font-bold'>{t('submission')}</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className='space-y-3'>
+        <TableBody className='space-y-2'>
           {STARTUP_LIST.map((item) => (
-            <TableRow
-              key={item.DA}
-              className='tr-rounded h-16 rounded-[4px] border-none bg-default-bg hover:bg-slate-200'
-            >
+            <TableRow key={item.DA} className=''>
               <TableCell className='text-sm'>{item.DA}</TableCell>
               <TableCell className='text-[18px]'>{item.Website}</TableCell>
               <TableCell className='flex gap-1'>
@@ -37,15 +35,10 @@ export default function DesktopTable() {
                 <PriceItem title={item.Price} isFree={item.Price.toLowerCase() === 'free'} />
               </TableCell>
               <TableCell>
-                <a
-                  href={item.URL}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='flex-center h-10 w-full rounded-[4px] border border-[#686B84] hover:opacity-80'
-                >
-                  <SquareArrowOutUpRight className='text-[#686B84]' />
+                <Link href={item.URL} target='_blank' rel='noreferrer'>
+                  <SquareArrowOutUpRight className='' />
                   <span className='sr-only'>{item.Website}</span>
-                </a>
+                </Link>
               </TableCell>
             </TableRow>
           ))}
