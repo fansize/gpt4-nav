@@ -21,7 +21,6 @@
     "contactUs": "お問い合わせ"
   },
   "Faq": {
-    "title": "よくある質問",
     "1": {
       "question": "GPT4oo AI ツールディレクトリとは何ですか？",
       "answer": "GPT4oo AI ツールディレクトリ - GPT4oo.ai は、お気に入りのAIツールを手に入れるのを助けるAIツールディレクトリを作成しています。AIライティングツール、AIマーケティングツール、AIパラフレーズツール、AI SEOツール、AI学習ツール、AIジェネレーターツール、AIリサーチツール、AIアートツール、AI音楽ツール、AIビデオツール、AIコーディングツール、AIフォトツールなどがここで手に入ります。"
@@ -68,7 +67,8 @@
     "11": {
       "question": "GPT4oo AIディレクトリのWebUIはオープンソースですか？",
       "answer": "はい、GPT4oo AIディレクトリのWebUIはGitHub（https://github.com/6677-ai/GPT4oo-ai-webui）でオープンソース化されます。私たちにスターを付けてください。"
-    }
+    },
+    "title": "よくある質問"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -102,7 +102,15 @@
       "3-h2": "2. 所有権",
       "3-p": "ウェブサイトのテキストから生成された画像の所有権は、画像を作成した個人にあります。 GPT4oo.aiは、ユーザーが作成した画像の所有権を主張しません。",
       "4-h2": "3. ユーザーデータの収集",
-      "4-p": "私たちは、サービスの改善のために個人データ（名前、電子メール、および支払い情報）および非個人データ（Webクッキー）を収集します。 このデータの使用は、私たちのプライバシーポリシーによって規制されています。"
+      "4-p": "私たちは、サービスの改善のために個人データ（名前、電子メール、および支払い情報）および非個人データ（Webクッキー）を収集します。 このデータの使用は、私たちのプライバシーポリシーによって規制されています。",
+      "5-h2": "4. Governing Law",
+      "5-p": "These Terms shall be governed and construed in accordance with the laws of the United States of America, without regard to its conflict of law provisions.",
+      "6-h2": "5. Changes to Terms",
+      "6-p": "GPT4oo AI Directory reserves the right, at our sole discretion, to modify or replace these Terms at any time. We will notify users of any changes by email. Your continued use of the Website after any change in these Terms will constitute your acceptance of such changes.",
+      "7-h2": "6. Contact Information",
+      "7-p": "If you have any questions about these Terms, please contact us at contact@6677.ai.",
+      "last-p": "By using GPT4oo AI Directory, you signify your acceptance of these Terms of Service.",
+      "terms-of-service": "terms-of-service"
     }
   },
   "NotFound": {
@@ -113,7 +121,15 @@
     "title": "GPT4oo AI - 2024年のベストAIツールを発見する",
     "subTitle": "GPT4oo AIツールディレクトリでお気に入りのAIツールを手に入れましょう。 AIツールリストはGPT-4oによって毎日更新されます。 ここで無料で提出して、SEOを強化しましょう。",
     "ai-navigate": "AIツールリスト",
-    "exploreMore": "もっと多くのAIツールを入手する"
+    "exploreMore": "もっと多くのAIツールを入手する",
+    "categoryName": {
+      "1Chatbots": "Chatbots",
+      "2Writing assistants": "Writing Assistants",
+      "3Text to Image": "Text to Image",
+      "4Productivity": "Productivity",
+      "8Navigation": "Navigation",
+      "9Learning Resources": "Learning Resources"
+    }
   },
   "Submit": {
     "title": "AIツールを提出する",

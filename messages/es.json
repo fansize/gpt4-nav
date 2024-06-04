@@ -21,7 +21,6 @@
     "contactUs": "Contáctanos"
   },
   "Faq": {
-    "title": "Preguntas Frecuentes",
     "1": {
       "question": "¿Qué es el Directorio de Herramientas de IA de GPT4oo?",
       "answer": "El Directorio de Herramientas de IA de GPT4oo - GPT4oo.ai crea un directorio de herramientas de IA que te ayuda a encontrar tus herramientas de IA favoritas. Aquí puedes encontrar herramientas de escritura de IA, herramientas de marketing de IA, herramientas de parafraseo de IA, herramientas de SEO de IA, herramientas de aprendizaje de IA, herramientas generadoras de IA, herramientas de investigación de IA, herramientas de arte de IA, herramientas de música de IA, herramientas de video de IA, herramientas de codificación de IA, herramientas de fotografía de IA y más."
@@ -68,7 +67,8 @@
     "11": {
       "question": "¿Es de código abierto la interfaz de usuario web del Directorio de Herramientas de IA de GPT4oo?",
       "answer": "Sí, pondremos la interfaz de usuario web del Directorio de Herramientas de IA de GPT4oo en GitHub (https://github.com/6677-ai/GPT4oo-ai-webui) de código abierto. ¡Por favor, danos una estrella!"
-    }
+    },
+    "title": "Preguntas Frecuentes"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -121,7 +121,15 @@
     "title": "GPT4oo AI - Descubre las Mejores Herramientas de IA 2024",
     "subTitle": "Obtén tus herramientas de IA favoritas en el Directorio de Herramientas de IA de GPT4oo. La lista de herramientas de IA se actualiza diariamente por GPT-4o. Es gratis enviar aquí para mejorar tu SEO ahora.",
     "ai-navigate": "Lista de Herramientas de IA",
-    "exploreMore": "Explorar Más Herramientas de IA"
+    "exploreMore": "Explorar Más Herramientas de IA",
+    "categoryName": {
+      "1Chatbots": "Chatbots",
+      "2Writing assistants": "Asistentes de escritura",
+      "3Text to Image": "Texto a imagen",
+      "4Productivity": "Productividad",
+      "8Navigation": "Navegación",
+      "9Learning Resources": "Recursos de aprendizaje"
+    }
   },
   "Submit": {
     "title": "Envía tu Herramienta de IA",

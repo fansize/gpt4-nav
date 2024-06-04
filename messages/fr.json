@@ -21,7 +21,6 @@
     "contactUs": "Contactez-nous"
   },
   "Faq": {
-    "title": "FAQ",
     "1": {
       "question": "Qu'est-ce que le Répertoire des outils AI de GPT4oo ?",
       "answer": "Le Répertoire des outils AI de GPT4oo - GPT4oo.ai est en train de construire un répertoire d'outils AI pour vous aider à obtenir vos outils AI préférés. Vous pouvez y trouver des outils d'écriture AI, des outils de marketing AI, des outils de réécriture AI, des outils SEO AI, des outils d'apprentissage AI, des outils de génération AI, des outils de recherche AI, des outils artistiques AI, des outils de musique AI, des outils vidéo AI, des outils de codage AI, des outils photo AI, etc."
@@ -68,7 +67,8 @@
     "11": {
       "question": "L'interface Web du Répertoire des outils AI de GPT4oo est-elle open source ?",
       "answer": "Oui, nous ouvrirons l'interface Web du Répertoire des outils AI de GPT4oo sur GitHub (https://github.com/6677-ai/GPT4oo-ai-webui). Veuillez nous donner un étoile."
-    }
+    },
+    "title": "FAQ"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -121,7 +121,15 @@
     "title": "GPT4oo AI - Découvrez les meilleurs outils AI de 2024",
     "subTitle": "Trouvez vos outils AI préférés dans le Répertoire des outils AI de GPT4oo. La liste des outils AI est mise à jour quotidiennement par GPT-4o. Soumettez gratuitement maintenant pour améliorer votre SEO.",
     "ai-navigate": "Liste des outils AI",
-    "exploreMore": "Obtenez plus d'outils AI"
+    "exploreMore": "Obtenez plus d'outils AI",
+    "categoryName": {
+      "1Chatbots": "Chatbots",
+      "2Writing assistants": "Assistants à la rédaction",
+      "3Text to Image": "Texte en image",
+      "4Productivity": "Productivité",
+      "8Navigation": "La navigation",
+      "9Learning Resources": "Ressources d'apprentissage"
+    }
   },
   "Submit": {
     "title": "Soumettez votre outil AI",

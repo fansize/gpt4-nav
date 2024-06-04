@@ -21,7 +21,6 @@
     "contactUs": "聯繫我們"
   },
   "Faq": {
-    "title": "常見問題",
     "1": {
       "question": "GPT4oo AI工具目錄是什麼？",
       "answer": "GPT4oo AI工具目錄 - GPT4oo.ai正在建立一個AI工具目錄，幫助您獲取您喜愛的AI工具。您可以在這裡找到AI寫作工具、AI營銷工具、AI改寫工具、AI SEO工具、AI學習工具、AI生成工具、AI研究工具、AI藝術工具、AI音樂工具、AI視頻工具、AI編碼工具、AI照片工具等。"
@@ -68,7 +67,8 @@
     "11": {
       "question": "GPT4oo AI目錄的Web界面是開源的嗎？",
       "answer": "是的，我們將在github（https://github.com/6677-ai/GPT4oo-ai-webui）上開源GPT4oo AI目錄的Web界面。請給我們點贊。"
-    }
+    },
+    "title": "常見問題"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -121,7 +121,15 @@
     "title": "GPT4oo AI - 發現2024年最佳AI工具",
     "subTitle": "在GPT4oo AI工具目錄中找到您喜愛的AI工具。AI工具列表每天由GPT-4o更新。現在免費提交以提升您的SEO。",
     "ai-navigate": "AI工具列表",
-    "exploreMore": "獲取更多AI工具"
+    "exploreMore": "獲取更多AI工具",
+    "categoryName": {
+      "1Chatbots": "Chatbots a wɔde di dwuma",
+      "2Writing assistants": "Akyerɛwfo Boafo",
+      "3Text to Image": "Text to Image",
+      "4Productivity": "Nneɛma a wɔyɛ no yiye",
+      "8Navigation": "Navigation a wɔde fa kwan so",
+      "9Learning Resources": "Adesua Nneɛma a Wɔde Yɛ Adwuma"
+    }
   },
   "Submit": {
     "title": "提交您的AI工具",

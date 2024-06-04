@@ -21,7 +21,6 @@
     "contactUs": "联系我们"
   },
   "Faq": {
-    "title": "常见问题",
     "1": {
       "question": "GPT4oo AI工具目录是什么？",
       "answer": "GPT4oo AI工具目录 - GPT4oo.ai正在建立一个AI工具目录，帮助您获取您喜爱的AI工具。您可以在这里找到AI写作工具、AI营销工具、AI改写工具、AI SEO工具、AI学习工具、AI生成工具、AI研究工具、AI艺术工具、AI音乐工具、AI视频工具、AI编码工具、AI图片工具等等。"
@@ -68,7 +67,8 @@
     "11": {
       "question": "GPT4oo AI目录的Web UI是开源的吗？",
       "answer": "是的，我们将在GitHub（https://github.com/6677-ai/GPT4oo-ai-webui）上开源GPT4oo AI目录的Web UI。请给我们点星。"
-    }
+    },
+    "title": "常见问题"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -127,7 +127,8 @@
       "2Writing assistants": "AI写作助手",
       "3Text to Image": "AI图片生成",
       "4Productivity": "生产力",
-      "9Learning Resources": "AI学习资源"
+      "9Learning Resources": "AI学习资源",
+      "8Navigation": "导航站"
     }
   },
   "Submit": {

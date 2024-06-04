@@ -21,7 +21,6 @@
     "contactUs": "Contate-nos"
   },
   "Faq": {
-    "title": "Perguntas Frequentes",
     "1": {
       "question": "O que é o Diretório de Ferramentas de IA do GPT4oo?",
       "answer": "O Diretório de Ferramentas de IA do GPT4oo - GPT4oo.ai está construindo um diretório de ferramentas de IA que ajuda você a obter suas ferramentas de IA favoritas. Você pode obter ferramentas de escrita de IA, ferramentas de marketing de IA, ferramentas de parafraseamento de IA, ferramentas de SEO de IA, ferramentas de estudo de IA, ferramentas de geração de IA, ferramentas de pesquisa de IA, ferramentas de arte de IA, ferramentas de música de IA, ferramentas de vídeo de IA, ferramentas de codificação de IA, ferramentas de foto de IA e muito mais aqui."
@@ -68,7 +67,8 @@
     "11": {
       "question": "O webui do Diretório de IA do GPT4oo é de código aberto?",
       "answer": "Sim, vamos abrir o código-fonte do webui do Diretório de IA do GPT4oo no github (https://github.com/6677-ai/GPT4oo-ai-webui). Por favor, nos dê uma estrela."
-    }
+    },
+    "title": "Perguntas Frequentes"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -121,7 +121,15 @@
     "title": "GPT4oo IA - Descubra As Melhores Ferramentas de IA 2024",
     "subTitle": "Obtenha suas ferramentas de IA favoritas no Diretório de Ferramentas de IA do GPT4oo. A lista de ferramentas de IA é atualizada diariamente pelo GPT-4o. É grátis para enviar aqui e melhorar seu SEO agora.",
     "ai-navigate": "Lista de Ferramentas de IA",
-    "exploreMore": "Obter Mais Ferramentas de IA"
+    "exploreMore": "Obter Mais Ferramentas de IA",
+    "categoryName": {
+      "1Chatbots": "Bots de bate-papo",
+      "2Writing assistants": "Assistentes de Redação",
+      "3Text to Image": "Texto para imagem",
+      "4Productivity": "Produtividade",
+      "8Navigation": "Navegação",
+      "9Learning Resources": "Recursos de aprendizagem"
+    }
   },
   "Submit": {
     "title": "Envie sua Ferramenta de IA",

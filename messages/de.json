@@ -21,7 +21,6 @@
     "contactUs": "Kontaktieren Sie uns"
   },
   "Faq": {
-    "title": "Häufig gestellte Fragen",
     "1": {
       "question": "Was ist das GPT4oo AI Tools Verzeichnis?",
       "answer": "Das GPT4oo AI Tools Verzeichnis - GPT4oo.ai erstellt ein Verzeichnis von KI-Tools, das Ihnen hilft, Ihre Lieblings-KI-Tools zu finden. Sie können hier KI-Schreibtools, KI-Marketingtools, KI-Paraphrasierungstools, KI-SEO-Tools, KI-Lern-Tools, KI-Generator-Tools, KI-Forschungstools, KI-Kunsttools, KI-Musiktools, KI-Videotools, KI-Coding-Tools, KI-Fototools und mehr finden."
@@ -68,7 +67,8 @@
     "11": {
       "question": "Ist das WebUI des GPT4oo AI Verzeichnisses Open Source?",
       "answer": "Ja, wir werden das WebUI des GPT4oo AI Verzeichnisses auf GitHub (https://github.com/6677-ai/GPT4oo-ai-webui) open source. Bitte geben Sie uns einen Stern."
-    }
+    },
+    "title": "Häufig gestellte Fragen"
   },
   "FooterNavigation": {
     "privacyPolicy": {
@@ -121,7 +121,15 @@
     "title": "GPT4oo AI - Entdecken Sie die besten KI-Tools 2024",
     "subTitle": "Holen Sie sich Ihre Lieblings-KI-Tools im GPT4oo AI Tools Verzeichnis. Die Liste der KI-Tools wird täglich von GPT-4o aktualisiert. Es ist kostenlos, sie hier einzureichen, um Ihr SEO jetzt zu verbessern.",
     "ai-navigate": "KI-Tools Liste",
-    "exploreMore": "Weitere KI-Tools entdecken"
+    "exploreMore": "Weitere KI-Tools entdecken",
+    "categoryName": {
+      "1Chatbots": "Chatbots",
+      "2Writing assistants": "Schreibassistenten",
+      "3Text to Image": "Text zu Bild",
+      "4Productivity": "Produktivität",
+      "8Navigation": "Navigation",
+      "9Learning Resources": "Lernmittel"
+    }
   },
   "Submit": {
     "title": "Reichen Sie Ihr KI-Tool ein",
