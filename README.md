@@ -1,124 +1,103 @@
-# Tap4 AI Web UI
+# GPT4oo - AI 工具导航站
 
-Tap4 AI Web UI is the open source AI tools directory build by [Tap4 AI Tools Directory](https://gpt4oo.com). The project
-aims to help everyone build their own AI Tools Directory easily. You can fork the project and deploy to vercel by one
-click and update your own ai tools by the dataList in the project.
+## 功能
 
-English | [简体中文](https://github.com/6677-ai/tap4-ai-webui/blob/main/README.zh-CN.md)
+- 国际化
+- SEO 友好（支持 i18n）
+- 动态 sitemap.xml（支持 i18n）
+- 使用 NEXT 14 和 app 路由（react 服务器组件）
+- Supabase serverless 数据库
 
-## Features
+## 快速开始
 
-- Internationalization
-- SEO friendly (with i18n)
-- sitemap.xml (dynamic with i18n)
-- Ship fast
-- NEXT 14 with app route (react server component)
-- Supabase serverless database
-
-![tai4-ai](./public/images/tap4-ai.png)
-
-## Quick Start
-
-### Deploy on Vercel **(Don't forget to setup env)**
+### 在 Vercel 上部署 **（别忘了设置环境变量）**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,GOOGLE_TRACKING_ID,GOOGLE_ADSENSE_URL,CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&project-name=tap4-ai)
 
-## Runs on local
+## 本地运行
 
-### install
+### 安装
 
 - node
 - nvm
 - pnpm
 
-### setup
+### 设置
 
-#### (1) clone this project
+#### （1）克隆此项目
 
 ```sh
 git clone https://github.com/6677-ai/tap4-ai-webui.git
 ```
 
-#### (2) signup a account on supabase then create a project
+#### （2）在 supabase 上注册一个账户，然后创建一个项目
 
 [https://supabase.com](https://supabase.com)
 
-#### (3) setup env
+#### （3）设置环境变量
 
-- run this first and then fill in the values on `.env.local`
-- setup your supabase URL and KEY here
+- 先运行这个，然后在 `.env.local` 填入数值。
+- 这里设置你的 supabase URL 和 KEY
 
 ```sh
 cp .env.example .env.local
 ```
 
-#### (4) runs on dev mode
+#### （4）在开发模式下运行
 
-switch to the particular node version
+切换到特定的 node 版本
 
 ```sh
 nvm use
 ```
 
-install packages
+安装依赖包
 
 ```sh
 pnpm i
 ```
 
-run on dev mode
+在开发模式下运行
 
 ```sh
 pnpm dev
 ```
 
-## How to upate your content?
+## 如何更新您的内容？
 
-### update "home" or "explore" page (`/` or `/explore`)
+### 更新“主页”或“探索”页面（`/` 或 `/explore`）
 
 ```sh
 lib/data.ts -> dataList
 ```
 
-### update detail page (`/ai/website-name`)
+### 更新详情页面（`/ai/website-name`）
 
-- PS: `detail` supports markdown
+- PS: `detail` 支持 Markdown
 
 ```sh
 lib/data.ts -> detailList
 ```
 
-### submit website and read it from database
+### 提交网站并从数据库中读取
 
-1. runs the website and then go to `/submit` page
-2. input the values and then submit the form
-3. open and check your supabase project
+1. 运行网站后，打开 `/submit` 页面
+2. 输入数值并提交表单
+3. 打开并检查您的 Supabase 项目
 
-## Wanna submit your website on Tap4.ai?
+## 打算在 Tap4.ai 上提交您的网站？
 
-### Wanna add you website to our `/startup` page?
+### 打算将您的网站添加到我们的 `/startup` 页面？
 
-- open an issue here: [TAP4-AI-Directory](https://github.com/6677-ai/TAP4-AI-Directory/issues)
-- email us: contact@tap4.ai
+- 在这里打开一个问题：[TAP4-AI-Directory](https://github.com/6677-ai/TAP4-AI-Directory/issues)
+- 给我们发邮件：[contact@tap4.ai](mailto:contact@tap4.ai)
 
-## Links to our products
+## 其他开源项目
 
-### TAP4-AI-Directory
+### 网站内容爬虫代码
 
-The Collection for the AI tools all over the world. | Collect free ChatGPT mirrors, alternatives,prompt, other AI tools,
-etc. For more, please visit: [Tap4 AI](https://gpt4oo.com)
+访问：[6677-ai/tap4-ai-scraper](https://github.com/6677-ai/tap4-ai-scraper)
 
-### Anime Girl Studio -- AI Anime Girl Generator and Chat
-
-Anime Girl Studio is the ai anime girl generator and chat product. You can generate what you like and chat with the AI
-anime girl, please visit [Anime Girl Studio](https://animegirl.studio)
-
-## Other open source
-
-### Website content crawler code
-
-visit: [6677-ai/tap4-ai-scraper](https://github.com/6677-ai/tap4-ai-scraper)
-
-## LICENSE
+## 许可证
 
 MIT

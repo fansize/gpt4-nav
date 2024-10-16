@@ -1,12 +1,11 @@
 import { type MetadataRoute } from 'next';
 import { locales } from '@/i18n';
-
 import { BASE_URL } from '@/lib/env';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapRoutes: MetadataRoute.Sitemap = [
     {
-      url: '', // home
+      url: '',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
