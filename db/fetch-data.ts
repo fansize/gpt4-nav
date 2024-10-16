@@ -65,3 +65,32 @@ export async function getAIProducts(): Promise<GroupedAIProducts> {
         return handleError(error, STRINGS.ERROR_FETCH);
     }
 }
+
+// 按分类获取AI产品
+export async function getAIProductsByCategory(category: string): Promise<AIProduct[]> {
+    console.log('category', category);
+
+    try {
+        const supabase = createClient();
+
+        const { data: aiProducts, error } = await supabase
+            .from(STRINGS.TABLE_NAME)
+            .select('id, name, title, thumbnailUrl, url, content, starRating, categoryName')
+            .eq('categoryName', category)
+            .order('starRating', { ascending: false });
+
+        if (error) throw error;
+        if (!aiProducts) return [];
+
+        return aiProducts.map(row => ({
+            ...row,
+            imageUrl: '',
+            collectionTime: '',
+            detail: '',
+            tagName: '',
+            websiteData: '',
+        }));
+    } catch (error) {
+        return handleError(error, `获取${category}类别的AI产品数据时发生错误`);
+    }
+}

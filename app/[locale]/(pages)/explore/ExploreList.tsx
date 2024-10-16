@@ -1,7 +1,7 @@
 import { getWebNavigationList } from '@/network/webNavigation';
 
 import BasePagination from '@/components/page/BasePagination';
-import WebNavCardList from '@/components/webNav/WebNavCardList';
+import CardsGallery from '@/components/webNav/WebNavCardList';
 
 const WEB_PAGE_SIZE = 20;
 
@@ -17,7 +17,7 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
 
   return (
     <>
-      <WebNavCardList dataList={res.rows} />
+      <CardsGallery dataList={res.rows} />
       <BasePagination
         currentPage={currentPage}
         pageSize={WEB_PAGE_SIZE}

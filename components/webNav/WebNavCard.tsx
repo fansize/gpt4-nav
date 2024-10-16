@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
-
 import { WebNavigationListRow } from '@/lib/data';
-
 import BaseImage from '../image/BaseImage';
 
-export default function WebNavCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
+export default function ProductCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
   return (
-    <div className='flex flex-col gap-3  rounded-lg border bg-card p-2 text-card-foreground shadow-sm lg:p-5'>
+    <div className='flex flex-col gap-3 rounded-lg border p-3 lg:p-4 hover:shadow-md'>
       <Link href={`/ai/${name}`} title={title}>
         <BaseImage
           width={2422}
@@ -15,7 +13,7 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
           src={thumbnailUrl || `https://img.gpt4oo.com/Chatbox%2F${name}.jpeg`}
           alt={title}
           title={title}
-          className='aspect-[2422/1562] rounded-[8px] bg-white/40 hover:opacity-70'
+          className='aspect-[2422/1562] rounded-lg hover:opacity-80'
         />
       </Link>
       <div className='flex items-center justify-between'>
@@ -27,7 +25,7 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
           <span className='sr-only'>{title}</span>
         </Link>
       </div>
-      <p className='line-clamp-4 text-xs text-slate-800 lg:text-sm'>{content}</p>
+      <p className='line-clamp-3 text-xs text-slate-800 lg:text-sm'>{content}</p>
     </div>
   );
 }

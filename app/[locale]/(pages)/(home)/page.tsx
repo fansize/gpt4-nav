@@ -47,7 +47,7 @@ export default async function Page() {
   return (
     <section id='products gallery' className='container py-10'>
       {/* 页面标题和副标题 */}
-      <div className='flex flex-col items-start justify-start gap-4 bg-yellow-300'>
+      <div className='flex flex-col items-start justify-start gap-4'>
         <h1 className='text-3xl font-bold md:text-4xl '>{t('title')}</h1>
         <h2 className='text-lg text-muted-foreground md:w-3/4'>{t('subTitle')}</h2>
       </div>
@@ -56,7 +56,7 @@ export default async function Page() {
       <CategoryTags categories={sortedCategroyKeys} t={t} />
 
       {/* 产品部分 */}
-      <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-10'>
         {sortedCategroyKeys.map((categoryName) => (
           <ProductSection
             key={categoryName}
