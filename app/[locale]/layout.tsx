@@ -1,18 +1,12 @@
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import { Toaster } from '@/components/ui/sonner';
-import Background from '@/components/home/Background';
-import Navigation from '@/components/home/Navigation';
-
 import './globals.css';
 
-import { Suspense } from 'react';
+import { Toaster } from '@/components/ui/sonner';
+import NavBar from '@/components/home/Navigation';
 
-import GoogleAdScript from '@/components/ad/GoogleAdScript';
 import SeoScript from '@/components/seo/SeoScript';
-
-import Loading from './loading';
 
 export default function RootLayout({
   children,
@@ -25,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className='relative mx-auto flex min-h-screen flex-col bg-white  text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50'>
+      <body className='relative min-h-screen mx-auto flex flex-col bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Toaster
             position='top-center'
@@ -38,13 +32,11 @@ export default function RootLayout({
               },
             }}
           />
-          <Background />
-          <Navigation />
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          <NavBar />
+          {children}
         </NextIntlClientProvider>
         <Analytics />
         <SeoScript />
-        {/* <GoogleAdScript /> */}
       </body>
     </html>
   );

@@ -1,23 +1,19 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { NAV_LINKS } from '@/lib/constants';
-import { cn } from '@/lib/utils';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 
 import BaseImage from '../image/BaseImage';
 import LocaleSwitcher from '../LocaleSwitcher';
 import { buttonVariants } from '../ui/button';
-import MenuBtn from './MenuBtn';
 import NavigationDrawer from './NavigationDrawer';
 
-export default function Navigation() {
+export default function NavBar() {
   const t = useTranslations('Navigation');
-  const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
 
@@ -39,7 +35,7 @@ export default function Navigation() {
                   title={t('title')}
                   width={64}
                   height={64}
-                  className='size-[38px] lg:size-10'
+                  className='size-[38px] lg:size-8'
                 />
                 <p className='text-lg font-bold hover:opacity-80'>GPT4oo</p>
               </Link>

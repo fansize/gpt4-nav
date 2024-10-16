@@ -1,5 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript"],
+  "root": true,
+  "ignorePatterns": ["**/*"],
   "env": {
     "browser": true,
     "node": true
