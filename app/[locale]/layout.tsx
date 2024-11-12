@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import Script from 'next/script';
 
 import './globals.css';
 
@@ -36,6 +37,11 @@ export default function RootLayout({
           {children}
         </NextIntlClientProvider>
         <Analytics />
+        <Script
+          src="https://umami-selfhost-dusky.vercel.app/script.js"
+          data-website-id="d95ae235-123a-4df0-976b-cc37807f08bd"
+          strategy="afterInteractive"
+        />
         <SeoScript />
       </body>
     </html>

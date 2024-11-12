@@ -6,7 +6,7 @@ import BaseImage from '../image/BaseImage';
 export default function ProductCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
   return (
     <div className='flex flex-col gap-3 rounded-lg border p-3 lg:p-4 hover:shadow-md'>
-      <Link href={`/ai/${name}`} title={title}>
+      <Link href={url} title={title}>
         <BaseImage
           width={2422}
           height={1562}
